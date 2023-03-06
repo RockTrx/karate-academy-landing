@@ -1,0 +1,322 @@
+@media screen and (max-width: 1200px) {
+  html {
+    body {
+      .hero {
+        .hero-base {
+          .location-bar {
+            width: 70%;
+          }
+        }
+        .brands {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  html {
+    body {
+      header {
+        .menu-toggle {
+          display: unset;
+        }
+        nav {
+          .logo {
+            max-width: 70px;
+          }
+          .nav-links {
+            background: whitesmoke;
+            top: 80%;
+            right: 0;
+            position: absolute;
+            width: 150px;
+            flex-direction: column;
+            justify-content: space-evenly;
+            border-radius: 4px 0px 4px 4px;
+            transform: scaleY(0);
+            padding: 1em 0;
+            li {
+              margin: 0;
+              padding: 10px 0;
+            }
+            a {
+              opacity: 0;
+              color: black;
+              &:focus {
+                color: $unique-clr;
+              }
+            }
+            z-index: 2;
+          }
+        }
+        .header-bg {
+          background-size: cover;
+          background-position: right;
+        }
+
+        .hero {
+          .content {
+            gap: 1em;
+            p {
+              width: 100%;
+              line-height: 1.25em;
+            }
+          }
+          .hero-base {
+            .location-bar {
+              width: 85%;
+              padding: 0.45em 1em;
+            }
+          }
+          .brands {
+            ul {
+              padding: 1em;
+              li {
+                padding-right: 1.45em;
+                &:last-child {
+                  padding-right: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .importance {
+        h2 {
+          grid-column: 1;
+        }
+        img {
+          margin: 0 auto;
+          width: 50%;
+        }
+        .why {
+          margin-top: clamp(0.75em, 3vw, 1em);
+          & > div {
+            margin-bottom: clamp(1em, 2vw, 1.5em);
+          }
+          div {
+            p {
+              line-height: 1.45em;
+            }
+          }
+        }
+      }
+      .programme {
+        h2 {
+          margin: 0;
+        }
+        .content {
+          padding-top: 0;
+          h3 {
+            margin-bottom: 0.45em;
+          }
+        }
+        .regular {
+          margin-bottom: 0;
+          .benefits {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            grid-template-columns: 1fr 1fr;
+            .benefit {
+              & > span {
+                font-size: 0.8rem;
+                &:nth-child(2) {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
+        .comptetive {
+          flex-direction: column;
+          .content {
+            padding: 0;
+          }
+
+          .achievements {
+            max-width: 100%;
+
+            & .gallery .imgs .container {
+              padding: 0 !important;
+            }
+          }
+        }
+        .teaching {
+          column-gap: clamp(1em, 2vw, 2em);
+          row-gap: clamp(1.75em, 2vw, 2.75em);
+          grid-template-columns: 1fr 1fr;
+          margin-top: 0.75em;
+          h3 {
+            grid-column: 1/3;
+            margin-bottom: -0.75em;
+          }
+        }
+      }
+      .instructor {
+        h2 {
+          grid-column: 1/2;
+        }
+        img {
+          width: 50%;
+          margin: 0 auto;
+        }
+        .content {
+          gap: clamp(0.75em, 2vw, 0.9em);
+          p:nth-child(3) {
+            margin: 0;
+          }
+        }
+      }
+      .contact {
+        .form {
+          grid-row: 1;
+        }
+        .address {
+          padding: 0 clamp(1em, 3vw, 2em);
+        }
+      }
+      footer {
+        .logo {
+          padding-bottom: clamp(2em, 3vw, 3em);
+        }
+        & > div {
+          grid-column: 1/3;
+        }
+        .content {
+          padding: 0 clamp(1em, 2vw, 3em);
+        }
+        .copyright {
+          flex-direction: column;
+
+          p {
+            margin-top: clamp(1.45em, 2vw, 2em);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  html {
+    body {
+      header {
+        .header-bg::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(28, 28, 28, 0.1)
+          );
+        }
+        nav > .logo {
+          max-width: 50px;
+        }
+        .hero {
+          .hero-base {
+            display: flex;
+            justify-content: center;
+            .location-bar {
+              display: inline-flex;
+              width: unset;
+              flex-direction: column;
+              padding: 0.75em;
+              div {
+                display: inline-flex;
+                align-items: center;
+                margin-bottom: 10px;
+                &:nth-child(3) {
+                  margin: 0;
+                }
+                span:first-child {
+                  margin: 0;
+                  margin-right: 40px;
+                }
+              }
+            }
+            .scroll-dwn {
+              display: none;
+            }
+          }
+        }
+      }
+      .importance {
+        img {
+          width: clamp(80%, 4vw, 70%);
+        }
+
+        .why > div > i {
+          font-size: 0.55rem;
+        }
+        .why > div > div {
+          h3 {
+            font-size: 22px;
+            margin-bottom: 3px;
+          }
+          p {
+            line-height: 1.4em;
+          }
+        }
+      }
+      .programme {
+        .content {
+          p {
+            padding: 0;
+            line-height: 1.35em;
+          }
+        }
+        .comptetive {
+          .achievements {
+            .gallery {
+              i {
+                display: none;
+              }
+              .imgs {
+                overflow-x: scroll;
+                .container {
+                  div {
+                    min-width: 100%;
+                    padding: clamp(1em, 4vw, 5em);
+                  }
+                }
+              }
+            }
+          }
+        }
+        .regular > .benefits > h4 {
+          margin-bottom: 0;
+        }
+      }
+      .instructor {
+        img {
+          width: 80%;
+        }
+      }
+      .contact {
+        .form {
+          .content {
+            input {
+              padding: 1em 0.75em;
+            }
+          }
+        }
+      }
+      footer {
+        .logo {
+          padding-bottom: clamp(1.75em, 2vw, 2.45em);
+        }
+        .content div {
+          margin-bottom: 0.9em;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+header {
+  max-width: 1400px;
+}
+
+.container {
+  padding-top: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  .content {
+    width: 100%;
+    padding-left: 2em;
+
+    h1 {
+      margin-bottom: 0.35em;
+    }
+
+    .btn {
+      margin-top: 2em;
+    }
+  }
+
+  .illust {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  header {
+    padding-bottom: 2em;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    row-gap: 1em;
+    padding-top: 50px;
+
+    .content {
+      padding: 0;
+      text-align: center;
+    }
+
+    .illust {
+      grid-row: 1;
+    }
+  }
+}
